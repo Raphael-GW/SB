@@ -1,0 +1,8 @@
+ x86-64 é little ou big-endian?
+R: É Little-Endian pois está registrado como DDCCBBAA
+
+O endianess do assembly é necessariamente o mesmo endianess do hexadecimal?
+R: Sim, pois como os dois residem na mesma arquitetura, devem ter o mesmo endianess
+
+Qual dos arquivos representa o endianess real da máquina?
+R: O arquivo em hexadecimal pois é o arquivo bruto que a máquina vai ler
