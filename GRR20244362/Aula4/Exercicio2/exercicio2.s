@@ -8,7 +8,6 @@ main:
 	movl $1, 12(%rsp)
 	movl $0, 8(%rsp)
 	movl $5, %eax
-	int3 #interrompe o programa
 	movq %rbp, %rsp
 	popq %rbp
 	ret
