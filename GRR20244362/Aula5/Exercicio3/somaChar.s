@@ -12,4 +12,4 @@ main:
     subq $localSize, %rsp
 
     movl $3, %edx
-    leaq
+    leaq $
