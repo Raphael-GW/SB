@@ -1,8 +1,12 @@
 .equ STDIN, 0
 .equ STDOUT, 1
 
-.equ localSize, 32
+.equ localSize, -32
 .equ ptrStr, -32
+
+.section .rodata
+scanFormat:
+    .string "%s"
 
 .text
 .globl main
@@ -10,13 +14,15 @@
 main:
     pushq %rbp
     movq %rsp, %rbp
-    subq $localSize, %rsp
+    addq $localSize, %rsp
 
     leaq ptrStr(%rbp), %rsi
+    movq $scanFormat, %rdi
     movq $0, %rax
     call scanf
 
     movq ptrStr(%rbp), %rsi
+    movq $scanFormat, %rdi
     movq $0, %rax
     call printf
     jmp fim
