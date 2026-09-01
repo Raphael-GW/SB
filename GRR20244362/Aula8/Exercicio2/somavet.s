@@ -54,7 +54,7 @@ loop_soma:
     cmp $64, %r8
     jnz loop_soma
 
-    movq $rbp, %r12
+    movq %rbp, %r12
     addq $-256, %r12
     movl $0, %ebx
 loop_print:
