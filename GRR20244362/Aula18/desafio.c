@@ -7,10 +7,13 @@ int valida_senha (){
 	char minha_senha[9];
 	scanf ("%s", minha_senha);
 
-	int valido = strcmp (senha, minha_senha);
+	int valido = 1;
+	for (int i = 0; i < 9; ++i){
+		if (minha_senha[i] != senha[i])
+			valido = 0;
+	}
 	
-	if (valido == 0) return 1;
-	else return 0;
+	return valido;
 }
 
 int main (){
