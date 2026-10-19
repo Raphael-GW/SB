@@ -1,7 +1,10 @@
 #include <stdio.h>
-#include <string.h>
 
 char senha[9] = "85649721";
+
+void print_senha (){
+	printf ("%s\n", senha);
+}
 
 int valida_senha (){
 	char minha_senha[9];
@@ -22,5 +25,6 @@ int main (){
 	if (valido) printf ("Logado\n");
 	else printf ("Falha de login\n");
 
+	print_senha();
 	return 0;
 }
