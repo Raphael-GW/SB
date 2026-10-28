@@ -17,12 +17,13 @@ main:
     movq %rsp, %rbp
     addq $localSize, %rsp
 
+    movq $15, %rdx
     leaq ptrStr(%rbp), %rsi
-    movq $scanFormat, %rdi
+    movq $0, %rdi
     movq $0, %rax
-    call scanf
+    syscall
     leaq ptrStr(%rbp), %rbx #guarda o endereço inicial do buffer
-
+    movq $1, %r12
 while:
     movb (%rbx), %al  # le o byte atual
     cmpb $0, %al
@@ -33,16 +34,17 @@ while:
     cmpb $'z', %al
     ja prox
     subb $32, (%rbx)
-
+    addq $1, %r12
 prox:
     incq %rbx
     jmp while
 
 print:
+    movq %r12, %rdx
     leaq ptrStr(%rbp), %rsi
-    movq $scanFormat, %rdi
-    movq $0, %rax
-    call printf
+    movq $1, %rdi
+    movq $1, %rax
+    syscall
 
     movl $0, %eax
     movq %rbp, %rsp
