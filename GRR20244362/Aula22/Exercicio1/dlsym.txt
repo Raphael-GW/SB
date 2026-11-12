@@ -1,0 +1,13 @@
+#include <dlfcn.h>
+
+int     *iptr, (*fptr)(int);
+
+void *dlsym(void *restrict handle, const char *restrict name);
+
+void* handle = dlopen("/usr/home/me/libfoo.so", RTLD_LOCAL | RTLD_LAZY);
+
+*(void **)(&fptr) = dlsym(handle, "my_function");
+iptr = (int *)dlsym(handle, "my_object");
+
+/* invoke function, passing value of integer as a parameter */
+(*fptr)(*iptr);
