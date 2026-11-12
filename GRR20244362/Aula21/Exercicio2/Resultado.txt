@@ -1,0 +1,11 @@
+consDump.txt
+0000000000000000 <imprimirResultado>:
+
+matDump.txt 
+0000000000000000 <soma>:
+
+mainDump.txt
+0000000000001186 <imprimirResultado>:
+00000000000011b1 <soma>:
+
+R: Na linkedição é adicionado os binários na seção de testo e feita a realocação dos endereços por isso difere

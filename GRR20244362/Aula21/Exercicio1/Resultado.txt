@@ -1,0 +1,13 @@
+console.o
+000000000000000 T imprimirResultado
+                 U printf
+
+mat.o
+0000000000000000 T soma
+
+main.o
+                U imprimirResultado
+0000000000000000 T main
+                 U soma
+
+R: As funções criadas estão definidas em seus respectivos arquivos, na main fica como Undefined pois não ocorreu linkedição

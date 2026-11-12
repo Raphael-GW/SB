@@ -1,0 +1,5 @@
+main -> 16Kb
+main-static -> 798Kb
+
+R: Com static o linkeditor copia todas as funções da biblioteca para o binário
+fazendo ficar imenso
