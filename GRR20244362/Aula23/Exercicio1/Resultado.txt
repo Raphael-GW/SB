@@ -1,0 +1,4 @@
+Na chamada de duas funções, 3 stubs foram criados
+um para scanf, outro para printf e um útimo
+__stack_chk_fail que ajuda a identificar overflows 
+em certas funções (printf)
