@@ -1,5 +1,5 @@
 #include <stdio.h>
 
 void imprimir_mensagem(int valor) {
-	printf("Olá Mundo cruel (%d)\n", valor);
+	printf("Mundo feliz (%d)\n", valor);
 }
